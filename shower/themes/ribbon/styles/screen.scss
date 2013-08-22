@@ -242,12 +242,22 @@ a {
 		}
 	// Cover
 	&.cover {
-		background:#000;
+		background:#888;
 		@mixin cover {
 			img, svg, video,
 			object, canvas {
 				@content;
 				}
+			}
+			.img-logo {
+				position: absolute;
+				top: 60%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
 			}
 		@include cover {
 			position:absolute;
