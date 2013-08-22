@@ -1,132 +1,166 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>REST</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
-	<!--
-		To apply styles to the certain slides
-		set slide ID to get needed elements
-		-->
-	<style>
-		#Cover h2 {
-			margin:30px 0 0;
-			color:#FFF;
-			text-align:center;
-			font-size:70px;
-			}
-		#Cover p {
-			margin:10px 0 0;
-			text-align:center;
-			color:#FFF;
-			font-style:italic;
-			font-size:20px;
-			}
-			#Cover p a {
-				color:#FFF;
-				}
-		#Picture h2 {
-			color:#FFF;
-			}
-		#SeeMore h2 {
-			font-size:100px
-			}
-		#SeeMore img {
-			width:0.72em;
-			height:0.72em;
-			}
-	</style>
 </head>
 <body class="list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>REST (Representational State Transfer)</h1>
+		<p>Equipe: Fabrício, Graziele, Lucas</p>
 	</header>
 	<section class="slide cover" id="Cover"><div>
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="">
-		<!-- photo by John Carey, fiftyfootshadows.net -->
+		<h2>REST</h2>
+		<p>Equipe: Fabrício, Graziele, Lucas</a></p>
+		<img src="pictures/rest.jpg" alt="" width="1024px">
 	</div></section>
 	<section class="slide"><div>
-		<h2>Shower Key Features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>All modern browsers are supported</li>
-			<li>Slide themes are separated from engine</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		<h2>Introdução</h2>
+		<ul>
+			<li>Em 1990 a web começa a ganhar força</li>
+			<li class="next">Oportunidade de negócios</li>
+			<li class="next">Surge a necessidade de realizar transações pela internet</li>
+			<li class="next">Em 1998 surge o XML-RPC</li>
+			<li class="next">A partir do XML-RPC surge o SOAP</li>
+		</ul>
 	</div></section>
 	<section class="slide"><div>
-		<h2>Plain Text on Your Slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>SOAP (Simple Object Access Protocol)</h2>
+		<ul>
+			<li>Padrão baseado em ações</li>
+			<li class="next">Abstração para chamadas de métodos</li>
+			<li class="next">Em geral possui um único endereço de acesso e várias ações</li>
+			<li class="next">Essas ações podem ocorrer sobre vários protocolos, tais como SMTP, HTTP</li>
+			<li class="next">Quando utiliza o HTTP, faz uso apenas do verbo <strong>POST</strong></li>
+		</ul>
 	</div></section>
 	<section class="slide"><div>
-		<h2>All Kind of Lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
+		<h2>O que é REST?</h2>
+		<p>REST é uma técnica de engenharia de software para sistemas distribuídos.</p>
+		<p>Surgiu em 2000, em uma tese de doutorado sobre a web, escrita pelo norte-americano <strong>Roy Fielding *</strong></p>
+		<p class="note">* um dos principais autores da especificação HTTP</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Principais características</h2>
+		<ul>
+			<li>Utiliza padrões já existentes</li>
+			<li class="next">Stateless</li>
+			<li class="next">Orientado a recurso</li>
+			<li class="next">Interface uniforme para acesso aos recursos (URI)</li>
+			<li class="next">Representações independentes</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>REST - Stateless</h2>
+		<p>Toda requisição HTTP é completamente isolada das outras</p>
+		<p class="next">Cada requisição precisa incluir todas as informações para uma resposta do servidor</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>REST - Recursos</h2>
+		<p>Tudo que é importante ao ponto de ser exposto na web</p>
+		<ul>
+			<li>
+				Exemplos:
 				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
+					<li class="next">Tweets no Twitter</li>
+					<li class="next">Post no Facebook</li>
+					<li class="next">Fotos no Instagram</li>
 				</ul>
 			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
+		</ul>
+		<p class="next">Todo recurso possui no mínimo uma URI</p>
 	</div></section>
 	<section class="slide"><div>
-		<h2>Serious Citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
+		<h2>REST - Interface uniforme</h2>
+		<p>Utiliza os métodos do protocolo HTTP para manipulação de recursos (Verbos)</p>
+		<ul>
+			<li class="next">GET</li>
+			<li class="next">POST</li>
+			<li class="next">PUT</li>
+			<li class="next">DELETE</li>
+		</ul>
 	</div></section>
 	<section class="slide"><div>
-		<h2>Code Samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
+		<h2>REST - GET</h2>
+		<p>Utilizado para obter uma representação do recurso</p>
+		<ul>
+			<li class="next">
+				Exemplo:
+				<ul>
+					<li class="next">
+						<code>www.bookstore.com/books/<strong class="next" style="color: red;"><i>history</i></strong></code>
+					</li>
+				</ul>
+			</li>
+		</ul>
 	</div></section>
-	<section class="slide cover" id="Picture"><div>
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="">
-		<!-- photo by John Carey, fiftyfootshadows.net -->
+	<section class="slide"><div>
+		<h2>REST - POST</h2>
+		<p>Utilizado para criar um novo recurso</p>
+		<ul>
+			<li class="next">
+				Exemplo:
+				<ul>
+					<li class="next">
+						<code>www.bookstore.com/books/<strong class="next" style="color: red;"><i>new</i></strong></code>
+					</li>
+				</ul>
+			</li>
+		</ul>
 	</div></section>
+	<section class="slide"><div>
+		<h2>REST - PUT</h2>
+		<p>Utilizado para modificar um recurso existente</p>
+		<ul>
+			<li class="next">
+				Exemplo:
+				<ul>
+					<li class="next">
+						<code>www.bookstore.com/books/<strong class="next" style="color: red;"><i>edit{id}</i></strong></code>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>REST - DELETE</h2>
+		<p>Utilizado para deletar um recurso</p>
+		<ul>
+			<li class="next">
+				Exemplo:
+				<ul>
+					<li class="next">
+						<code>www.bookstore.com/books/<strong class="next" style="color: red;"><i>delete{id}</i></strong></code>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>REST - Variações</h2>
+		<ul>
+			<li class="next">
+				RESTful
+				<ul>
+					<li class="next">Utilização dos quatro verbos (GET, POST, PUT, DELETE)</li>
+				</ul>
+			</li>
+			<li class="next">
+				REST-RPC
+				<ul>
+					<li class="next">Utilização do método GET para toda API</li>
+				</ul>
+			</li>
+		</ul>
+	</div></section>
+
 	<section class="slide shout"><div>
-		<h2>You can even shout this way</h2>
+		<h2>Dúvidas?</h2>
 	</div></section>
-	<section class="slide"><div>
-		<h2>Inner Navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</div></section>
-	<section class="slide shout" id="SeeMore"><div>
-		<h2><img src="pictures/logo.svg" alt=""> <a href="https://github.com/shower/shower/">See more on GitHub</a></h2>
-	</div></section>
-	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
 	<!-- Copyright © 2013 Yours Truly, Famous Inc. -->
