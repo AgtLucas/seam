@@ -21,7 +21,7 @@
 	<section class="slide"><div>
 		<h2>Introdução - O que é o Seam Framework?</h2>
 		<p>O Seam é um poderoso framework open source de desenvolvimento web, desenvolvido por Gavin King (criador do Hibernate) na JBoss Group, uma divisão da Red Hat.</p>
-		<p>Ele integra tecnologias como Ajax, JavaServer Faces (JSF), Java Persistence (JPA), Enterprise Java Beans (EJB 3.0) e Bussiness Process Management (BPM) em uma solução completa.</p>
+		<p>Ele integra tecnologias como Ajax, JavaServer Faces (JSF), Java Persistence (JPA), Enterprise Java Beans (EJB 3.1) e Bussiness Process Management (BPM) em uma solução completa.</p>
 	</div></section>
 	<section class="slide"><div>
 		<h2>Por quê Seam?</h2>
@@ -30,126 +30,46 @@
 	</div></section>
 	<section class="slide"><div>
 		<h2>Por quê Seam?</h2>
-		<p>Enquanto a maioria dos frameworks de desenvolvimento web Java focam em uma camada específica, Seam integra todas as camadas.</p>
+		<p>Testes integrados em aplicações web Java têm sido difíceis e confusas, o Seam prevê testabilidade como recurso interno do framework, facilitando e muito os testes.</p>
 	</div></section>
-	<!-- <section class="slide"><div>
-		<h2>Principais características</h2>
+	<section class="slide"><div>
+		<h2>Vantagens</h2>
 		<ul>
-			<li>Utiliza padrões já existentes</li>
-			<li class="next">Stateless</li>
-			<li class="next">Orientado a recurso</li>
-			<li class="next">Interface uniforme para acesso aos recursos (URI)</li>
-			<li class="next">Representações independentes</li>
+			<li class="next">Desenvolvimento orientado a componentes</li>
+			<li class="next">Open source</li>
+			<li class="next">+ Anotations - XML</li>
+			<li class="next">Evita abuso de XML</li>
+			<li class="next">Produtivo</li>
+			<li class="next">Injeção e Ejeção de Dependência</li>
 		</ul>
 	</div></section>
 	<section class="slide"><div>
-		<h2>REST - Stateless</h2>
-		<p>Toda requisição HTTP é completamente isolada das outras</p>
-		<p class="next">Cada requisição precisa incluir todas as informações para uma resposta do servidor</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>REST - Recursos</h2>
-		<p>Tudo que é importante ao ponto de ser exposto na web</p>
+		<h2>Desvantagens</h2>
 		<ul>
-			<li>
-				Exemplos:
-				<ul>
-					<li class="next">Tweets no Twitter</li>
-					<li class="next">Post no Facebook</li>
-					<li class="next">Fotos no Instagram</li>
-				</ul>
-			</li>
-		</ul>
-		<p class="next">Todo recurso possui no mínimo uma URI</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>REST - Interface uniforme</h2>
-		<p>Utiliza os métodos do protocolo HTTP para manipulação de recursos (Verbos)</p>
-		<ul>
-			<li class="next">GET</li>
-			<li class="next">POST</li>
-			<li class="next">PUT</li>
-			<li class="next">DELETE</li>
+			<li class="next">Pouco usado</li>
+			<li class="next">Requer amplo conhecimento em JEE</li>
 		</ul>
 	</div></section>
 	<section class="slide"><div>
-		<h2>REST - GET</h2>
-		<p>Utilizado para obter uma representação do recurso</p>
-		<ul>
-			<li class="next">
-				Exemplo:
-				<ul>
-					<li class="next">
-						<code>www.bookstore.com/books/<strong class="next" style="color: red;"><i>history</i></strong></code>
-					</li>
-				</ul>
-			</li>
-		</ul>
+		<h2>Arquitetura e Tecnologias</h2>
+		<img class="seam-arc" src="pictures/jboss-seam.png" alt="Seam...">
 	</div></section>
 	<section class="slide"><div>
-		<h2>REST - POST</h2>
-		<p>Utilizado para criar um novo recurso</p>
-		<ul>
-			<li class="next">
-				Exemplo:
-				<ul>
-					<li class="next">
-						<code>www.bookstore.com/books/<strong class="next" style="color: red;"><i>new</i></strong></code>
-					</li>
-				</ul>
-			</li>
-		</ul>
+		<h2>JSF</h2>
+		<p>JavaServer Faces (JSF) é um framework MVC baseado em Java para a construção de interfaces de usuário baseadas em componentes para aplicações web. Possui um modelo de programação dirigido a eventos, abstraindo os detalhes da manipulação dos eventos e organização dos componentes, permitindo que o programador se concentre na lógica da aplicação.</p>
 	</div></section>
 	<section class="slide"><div>
-		<h2>REST - PUT</h2>
-		<p>Utilizado para modificar um recurso existente</p>
-		<ul>
-			<li class="next">
-				Exemplo:
-				<ul>
-					<li class="next">
-						<code>www.bookstore.com/books/<strong class="next" style="color: red;"><i>edit{id}</i></strong></code>
-					</li>
-				</ul>
-			</li>
-		</ul>
+		<h2>Facelets</h2>
+		<p>Um Facelet pode ser definido como uma seção reutilizável de conteúdo ou uma sub-árvore de componentes em uma página JSF que pode ser por si mesma composta de outros Facelets. Neste sentido, um Facelet é um elemento de uma visão composta que pode ser facilmente combinado com outros Facelets para construir uma visão JSF que será apresentada ao usuário.</p>
 	</div></section>
 	<section class="slide"><div>
-		<h2>REST - DELETE</h2>
-		<p>Utilizado para deletar um recurso</p>
-		<ul>
-			<li class="next">
-				Exemplo:
-				<ul>
-					<li class="next">
-						<code>www.bookstore.com/books/<strong class="next" style="color: red;"><i>delete{id}</i></strong></code>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>REST - Variações</h2>
-		<ul>
-			<li class="next">
-				RESTful
-				<ul>
-					<li class="next">Utilização dos quatro verbos (GET, POST, PUT, DELETE)</li>
-				</ul>
-			</li>
-			<li class="next">
-				REST-RPC
-				<ul>
-					<li class="next">Utilização do método GET para toda API</li>
-				</ul>
-			</li>
-		</ul>
+		<h2>EJB</h2>
+		<p>Enterprise JavaBeans (EJB) é um componente da plataforma J2EE que roda em um container de um servidor de aplicação. Seu principal objetivo consiste em fornecer um desenvolvimento rápido e simplificado de aplicações Java, com base em em componentes distribuídos, transacionais, seguros e portáveis. Atualmente, na versão 3.1, o EJB tem seu futuro definido conjuntamente entre grandes empresas como IBM, Oracle e HP, como também por uma vasta comunidade de programadores numa rede mundial de colaboração sob o portal do JCP.</p>
 	</div></section>
 
 	<section class="slide shout"><div>
 		<h2>Dúvidas?</h2>
-	</div></section> -->
+	</div></section>
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
 	<!-- Copyright © 2013 Yours Truly, Famous Inc. -->
